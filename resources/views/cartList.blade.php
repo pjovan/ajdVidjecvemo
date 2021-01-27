@@ -17,20 +17,18 @@
                     </a>
                 </div>
                 <div clas="colsm-3">
-                    <a href="detail/{{$item->id}}">
-                        <div class="">
-                            <h3>{{$item->name}}</h3>
-                            <h5>{{$item->description}}</h3>
-                        </div>
-                    </a>
+                    <div class="">
+                        <h3>{{$item->name}}</h3>
+                        <h5>{{$item->description}}</h3>
+                    </div>
                 </div>
                 <div clas="colsm-3">
-                   <a href="/removecart/{{$item->cart_id}}" class="btn btn-warning">Remove from cart</a>
+                    <a href="/removecart/{{$item->cart_id}}" class="btn btn-warning">Remove from cart</a>
                 </div>
-                
-                </div>
+
+            </div>
             @endforeach
-            
+
         </div>
     </div>
 </div>
