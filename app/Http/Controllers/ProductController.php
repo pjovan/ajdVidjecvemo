@@ -65,7 +65,7 @@ class ProductController extends Controller
     function orderNow()
     {
        $userId=Session::get('user')['id'];
-       $total=  $products=DB::table('cart')
+       $total=DB::table('cart')
         ->join('products', 'cart.product_id','=','products.id')
         ->where('cart.user_id',$userId)
         ->sum('products.price');
@@ -88,10 +88,16 @@ class ProductController extends Controller
             $order->save();
 
             Cart::where('user_id', $userId)->delete();
-
-
-
         }
        return redirect('/');
+    }
+    function myOrders(){
+        $userId=Session::get('user')['id'];
+        $orders= DB::table('orders')
+         ->join('products', 'orders.product_id','=','products.id')
+         ->where('orders.user_id',$userId)
+         ->get();
+ 
+         return view('myorders', ['orders'=>$orders]);    
     }
 }
