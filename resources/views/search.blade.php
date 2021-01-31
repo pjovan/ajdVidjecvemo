@@ -1,22 +1,23 @@
 @extends('master')
 @section('content')
 <div class="custom-product row">
-    <div claa="col-sm-4">
-        <a href="#">Filter</a>
+    <div class="col-sm-4">
     </div>
     <div class="col-sm-4">
-    <div class="trending-wrapper">
-            <h4>Searched products</h4>
+        <div class="trending-wrapper">
+            <h4>Searched products:</h4>
+            <br>
             @foreach($products as $item)
-                <div class="searched-item">
+            <div class="searched-item">
                 <a href="detail/{{$item->id}}">
                     <img class="trending-image" src="{{$item->gallery}}">
-                    <div class="">
-                        <h3>{{$item->name}}</h3>
-                        <h5>{{$item->description}}</h3>
-                    </div>
-                    </a>
+                </a>
+                <div class="">
+                    <h5>{{$item->name}}</h5>
+                    <h7>{{$item->description}}</h7>
                 </div>
+
+            </div>
             @endforeach
         </div>
     </div>

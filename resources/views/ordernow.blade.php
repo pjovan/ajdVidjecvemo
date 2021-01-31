@@ -1,13 +1,13 @@
 @extends('master')
 @section('content')
 <div class="custom-product ">
-    <div class="col-sm-10">
+    <div class="col-sm-10 tabela-margina">
         <table class="table">
 
             <tbody>
                 <tr>
                     <td>Amount</td>
-                    <td>{{$total}}</td>
+                    <td>$ {{$total}}</td>
                 </tr>
                 <tr>
                     <td>Tax</td>

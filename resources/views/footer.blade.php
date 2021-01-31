@@ -1,4 +1,8 @@
+<div style="clear:both" class="panel panel-default">
 
+  <div class="panel-footer">The end</div>
+</div>
+<!-- 
 <div style="clear:both" class="panel panel-default">
   <div class="panel-body">
     Panel content
@@ -6,7 +10,7 @@
   <div class="panel-footer">
     Panel footer
   </div>
-</div>
+</div> -->
 <!-- 
 <div class="card">
   <div class="card-body">
